@@ -31,21 +31,21 @@ html,
 .menu li > *:not(ul, .menu-title, details, .btn):focus,
 .menu li > *:not(ul, .menu-title, details, .btn):active {
     --tw-bg-opacity: 1;
-    background-color: #53CF4B; /* Màu nền khi hover */
+    background-color: #4096fe; /* Màu nền khi hover */
     --tw-text-opacity: 1;
     color: rgb(255, 255, 255); /* Màu chữ khi hover */
 }
 
 .menu li > details > summary:hover {
     --tw-bg-opacity: 1;
-    background-color: #53CF4B; /* Màu nền khi hover */
+    background-color: #4096fe; /* Màu nền khi hover */
     --tw-text-opacity: 1;
     color: rgb(255, 255, 255); /* Màu chữ khi hover */
 }
 
 .menu li > *:not(ul, .menu-title, details, .btn):active {
     --tw-bg-opacity: 1;
-    background-color: #219019; /* Màu nền khi active */
+    background-color: #0055bc; /* Màu nền khi active */
     --tw-text-opacity: 1;
     color: rgb(255, 255, 255); /* Màu chữ khi active */
 }
@@ -54,7 +54,7 @@ html,
 .menu li > *:not(ul, .menu-title, details, .btn).active,
 .menu li > details > summary:active {
     --tw-bg-opacity: 1;
-    background-color: #219019 !important;
+    background-color: #0055bc !important;
     --tw-text-opacity: 1;
     color: rgb(255, 255, 255) !important;
 }

@@ -43,6 +43,14 @@
                         </span>
                     </a>
                     @else
+
+                    <a class="hover:text-yellow-300" href="{{ route('dashboard') }}">
+                        <span class="border-white px-2 lg:border-l">
+                            🛠️ Quản trị
+                        </span>
+                    </a>
+
+                    <!-- Liên kết đăng xuất -->
                     <a class="hover:text-yellow-300" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <span class="border-white px-2 lg:border-l">

@@ -1,9 +1,9 @@
 <x-admin-layout>
     <link href="{{ asset('adminpage/datatable/dataTables.bootstrap5.css') }}" rel="stylesheet">
     <div class="flex-grow w-full md:p-5 p-1">
-        <div class="mb-5">
+        <div class="mb-5 flex">
             <h1 class="text-2xl font-semibold text-gray-800">Danh sách KTX</h1>
-            <nav class="mt-2">
+            <nav class="mt-2 ml-auto">
                 <ol class="breadcrumb flex text-sm text-gray-600 space-x-2">
                     <li class="breadcrumb-ktx">
                         <a>KTX</a>

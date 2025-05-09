@@ -2,13 +2,12 @@
     <div class="flex-grow w-full p-5 text-center ">
         <div class="breadcrumbs text-sm">
             <ul>
-                <li><a>KTX</a></li>
                 <li><a href="{{ route('admin.ktxs.index') }}">KTX</a></li>
                 <li><a class="text-teal-600">Thêm mới</a></li>
             </ul>
         </div>
 
-        <div class="overflow-x-auto bg-white rounded-lg mt-5">
+        <div class="overflow-x-auto bg-white rounded-lg mt-2">
 
             <form action="{{ route('admin.ktxs.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
