@@ -120,28 +120,117 @@
                                     <input id="gate-checkbox" type="checkbox" name="gate"
                                         class="h-4 w-4 rounded gate-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
                                     <label for="gate-checkbox" class="ml-2 text-sm font-medium text-slate-900">
-                                        Lớp Cổng
+                                        Cổng
                                     </label>
                                 </div>
                             </li>
-                            <li hidden>
+                            <li>
                                 <div class="flex items-start">
-                                    <input id="districts-checkbox" type="checkbox" name="districts" value="m"
+                                    <input id="campus-checkbox" type="checkbox" name="campus" value="m"
                                         class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
-                                    <label for="districts-checkbox" class="ml-2 text-sm font-medium text-slate-900">
-                                        Ranh giới huyện</label>
+                                    <label for="campus-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Sân</label>
                                 </div>
                             </li>
-                            <li hidden>
+                            <li >
                                 <div class="flex items-start">
-                                    <input id="communes-checkbox" type="checkbox" name="communes" value="m"
+                                    <input id="ktx-checkbox" type="checkbox" name="ktx" value="k"
                                         class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
-                                    <label for="communes-checkbox" class="ml-2 text-sm font-medium text-slate-900">
-                                        Ranh giới xã
+                                    <label for="ktx-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        KTX
                                     </label>
                                 </div>
                             </li>
-
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="hoitruong-checkbox" type="checkbox" name="hoitruong" value="h"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="hoitruong-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Hội trường
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="thuvien-checkbox" type="checkbox" name="thuvien" value="t"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="thuvien-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Thư viện
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="xuong-checkbox" type="checkbox" name="xuong" value="x"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="xuong-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Xưởng
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="vpkhoa-checkbox" type="checkbox" name="vpkhoa" value="v"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="vpkhoa-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Văn phòng Khoa
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="cantine-checkbox" type="checkbox" name="cantine" value="c"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="cantine-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Canteen
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="conference-checkbox" type="checkbox" name="conference" value="d"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="conference-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Conference
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="yte-checkbox" type="checkbox" name="yte" value="y"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="yte-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Y tế
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="giangduong-checkbox" type="checkbox" name="giangduong" value="g"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="giangduong-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        Giảng đường
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="tuaf-checkbox" type="checkbox" name="tuaf" value="u"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="tuaf-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        tnut 2030
+                                    </label>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="flex items-start">
+                                    <input id="lopdhcn1-checkbox" type="checkbox" name="lopdhcn1" value="l"
+                                        class="h-4 w-4 rounded border-slate-300 bg-slate-200 text-blue-600 focus:ring-2 focus:ring-blue-500">
+                                    <label for="lopdhcn1-checkbox" class="ml-2 text-sm font-medium text-slate-900">
+                                        TNUT
+                                    </label>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div x-data="{ open: false }">

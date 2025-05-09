@@ -39,7 +39,7 @@
     <div class="min-h-screen">
         {{-- Header gộp Navigation --}}
         <header class="tnut-red text-white">
-            <div class="container mx-auto px-4 py-3">
+            <div class="container px-4 py-3">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
 
                     {{-- Logo và tên trường --}}
@@ -54,7 +54,7 @@
                     </div>
 
                     {{-- Navigation menu --}}
-                    <nav class="mt-4 md:mt-0 w-full md:w-auto">
+                    <nav class="mt-4 md:mt-0 w-full">
                         <ul
                             class="flex flex-wrap justify-center md:justify-end items-center space-x-4 md:space-x-6 text-sm md:text-base font-medium">
                             <li><a href="/"
@@ -62,7 +62,6 @@
                                         chủ</span></a></li>
                             <li><a href="{{ route('gioi-thieu') }}" class="hover:text-yellow-300">Giới thiệu</a></li>
                             <li><a href="/lien-he" class="hover:text-yellow-300">Liên hệ</a></li>
-
                             {{-- Đăng nhập / Đăng xuất --}}
                             @guest
                                 <li>
