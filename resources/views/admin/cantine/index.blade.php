@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
     <h1>Danh sách cantine</h1>
@@ -36,6 +36,6 @@
             $('#cantine-table').DataTable();
         });
     </script>
-</x-app-layout>
+</x-admin-layout>
     
    

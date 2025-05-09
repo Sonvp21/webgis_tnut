@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
     <h1>Thêm yte</h1>
 
     <form action="{{ route('yte.store') }}" method="POST">
@@ -50,4 +50,4 @@
         });
         </script>
 
-</x-app-layout>
+</x-admin-layout>

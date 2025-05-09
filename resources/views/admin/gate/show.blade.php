@@ -1,5 +1,5 @@
 {{-- resources/views/gate/show.blade.php --}}
-<x-app-layout>
+<x-admin-layout>
     <div class="max-w-4xl mx-auto py-10 px-6 bg-white shadow-lg rounded-lg">
         <!-- Tiêu đề -->
         <h1 class="text-4xl font-bold text-red-600 mb-4 border-b pb-2">
@@ -19,4 +19,4 @@
             </a>
         </div>
     </div>
-</x-app-layout>
+</x-admin-layout>

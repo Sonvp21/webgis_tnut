@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
    
     <h1>Sửa gate</h1>
 
@@ -51,5 +51,5 @@
         });
         </script>
         
-</x-app-layout>
+</x-admin-layout>
    

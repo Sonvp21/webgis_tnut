@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
     <h1>Thêm xuong</h1>
 
     <form action="{{ route('xuong.store') }}" method="POST">
@@ -50,4 +50,4 @@
         });
         </script>
 
-</x-app-layout>
+</x-admin-layout>

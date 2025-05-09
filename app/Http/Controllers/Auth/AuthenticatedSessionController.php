@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
@@ -24,12 +25,22 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // Thực hiện xác thực người dùng
         $request->authenticate();
 
+        // Tạo session mới sau khi đăng nhập
         $request->session()->regenerate();
 
-        return redirect()->intended(route('home', absolute: false));
+        // Lấy URL redirect từ session hoặc về mặc định là route home
+        $redirectUrl = $request->session()->get('redirect_to', route('home'));
+
+        // Xóa URL khỏi session để tránh chuyển hướng lại lần sau
+        $request->session()->forget('redirect_to');
+
+        // Chuyển hướng đến URL cần redirect
+        return redirect()->to($redirectUrl);
     }
+    
 
     /**
      * Destroy an authenticated session.
@@ -43,5 +54,13 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+
+    public function saveUrl(Request $request)
+    {
+        // Lưu URL vào session
+        $request->session()->put('redirect_to', $request->redirect_url);
+        return response()->json(['message' => 'URL saved']);
     }
 }

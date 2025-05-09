@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\Admin\Notify;
+use App\Models\Admin\PostCategory;
+use App\Models\Admin\Product;
+use App\Observers\NotifyObserver;
+use App\Observers\PostCategoryObserver;
+use App\Observers\ProductObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Product::observe(ProductObserver::class);
+        PostCategory::observe(PostCategoryObserver::class);
+        Notify::observe(NotifyObserver::class);
     }
 }

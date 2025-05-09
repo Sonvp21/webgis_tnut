@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -13,7 +12,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'SHTT'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://gaokrongana.girc.edu.vn'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,9 +77,9 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'vi'),
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'vi'),
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
 
@@ -123,4 +122,27 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'home_category_id' => env('HOME_CATEGORY_ID', 1),
+
+    'home_album_science_and_technology_id' => env('HOME_ALBUM_SCIENCE_AND_TECHNOLOGY_ID', 1),
+    'home_album_infrastructure_id' => env('HOME_ALBUM_INFRASTRUCTURE_ID', 1),
+    'home_album_digital_transformation_id' => env('HOME_ALBUM_DIGITAL_TRANSFORMATION_ID', 1),
+    'home_album_study_space_id' => env('HOME_ALBUM_STUDY_SPACE_ID', 1),
+    'home_album_extra_curricular_activity_id' => env('HOME_ALBUM_EXTRA_CURRICULAR_ACTIVITYID', 1),
+
+    /*
+    |--------------------------------------------------------------------------
+    | API Configuration 
+    |--------------------------------------------------------------------------
+    |
+    | These values are used to configure API specific settings.
+    |
+    */
+    'api' => [
+        'prefix' => env('API_PREFIX', 'api'),
+        'version' => env('API_VERSION', 'v1'),
+        'pagination' => [
+            'per_page' => env('API_PAGINATION_PER_PAGE', 15)
+        ]
+    ],
 ];

@@ -24,7 +24,7 @@ return [
     | may even configure multiple disks for the same driver. Examples for
     | most supported storage drivers are configured here for reference.
     |
-    | Supported drivers: "local", "ftp", "sftp", "s3"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
@@ -32,10 +32,8 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app/private'),
-            'serve' => true,
+            'root' => storage_path('app'),
             'throw' => false,
-            'report' => false,
         ],
 
         'public' => [
@@ -44,7 +42,6 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
-            'report' => false,
         ],
 
         's3' => [
@@ -57,7 +54,54 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
-            'report' => false,
+        ],
+
+        'user' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/user'),
+            'url' => env('APP_URL').'/storage/user',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'post' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/post'),
+            'url' => env('APP_URL').'/storage/post',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'album' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/album/photo'),
+            'url' => env('APP_URL').'/storage/album/photo',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'patent' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/patent'),
+            'url' => env('APP_URL').'/storage/patent',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'product' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/product'),
+            'url' => env('APP_URL').'/storage/product',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'support' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/support'),
+            'url' => env('APP_URL').'/storage/support',
+            'visibility' => 'public',
+            'throw' => false,
         ],
 
     ],

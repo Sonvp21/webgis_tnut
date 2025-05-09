@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Admin\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-use Illuminate\Validation\Rules\Password;
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -31,26 +31,35 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
-            'password' => [
-                'required',
-                'confirmed',
-                Password::defaults(), // chứa độ dài tối thiểu và blacklist mật khẩu phổ biến
-                'regex:/[A-Z]/',      // ít nhất một chữ in hoa
-                'regex:/[^a-zA-Z0-9]/' // ít nhất một ký tự đặc biệt
-            ],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'district_id' => ['nullable', 'exists:districts,id'], // Kiểm tra district_id tồn tại trong bảng districts
+            'commune_id' => ['nullable', 'exists:communes,id'], // Kiểm tra commune_id tồn tại trong bảng communes
+            'full_name' => 'nullable',
+            'phone' => 'nullable',
+            'address' => 'nullable',
+            'birthday' => 'nullable',
+            'description' => 'nullable',
+            'ip' => 'nullable',
         ]);
-
+        
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'category_id' => null,
+            'status' => 'active',
+            'district_id' => $request->district_id,
+            'commune_id' => $request->commune_id,
+            // Giá trị mặc định
+            'email_verified_at' => now(), // Đánh dấu email đã xác minh ngay khi tạo mới user
         ]);
-
+        
+        
+        
         event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
+        return redirect(route('home'))
+        ->with('success', 'Đăng ký tài khoản thành công! Vui lòng đăng nhập để tiếp tục.');
     }
 }

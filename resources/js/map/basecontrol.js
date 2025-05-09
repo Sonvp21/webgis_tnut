@@ -7,7 +7,7 @@ import { Polygon, Circle, LineString } from 'ol/geom';
 import { getLength, getArea, getDistance } from 'ol/sphere';
 import { Style, Stroke, Fill, Circle as CircleStyle } from 'ol/style';
 
-export function DEFAULT_CONTROLS(map, vuonSource) {
+export function DEFAULT_CONTROLS(map, borderSource) {
 
 	const LAYER_SOURCE = {
 		measure: new VectorSource(),
@@ -258,18 +258,8 @@ export function DEFAULT_CONTROLS(map, vuonSource) {
 	});
 
 	/* Reset center */
-	// UI_TOOLS.reset.addEventListener('click', function () {
-	// 	map.getView().fit(vuonSource.getExtent());
-	// });
 	UI_TOOLS.reset.addEventListener('click', function () {
-		if (vuonSource && vuonSource.getExtent()) {
-			map.getView().fit(vuonSource.getExtent());
-		} else {
-			console.warn("vuonSource is not defined or has no extent.");
-			// Optionally set a default view or extent
-			map.getView().setCenter([105.8423093, 21.5490091]);
-			map.getView().setZoom(16.9);
-		}
+		map.getView().fit(borderSource.getExtent());
 	});
 
 	UI_TOOLS.mesureTool.forEach(function (el, i) {

@@ -42,12 +42,12 @@ export const TILE_LAYER_UI = {
     },
 };
 
-// TILE_LAYER_UI.toggle.vegetation.addEventListener("click", function () {
-//     TILE_LAYER.vegetation.setVisible(this.checked);
-// });
-// TILE_LAYER_UI.toggle.sinhcanh.addEventListener("click", function () {
-//     TILE_LAYER.sinhcanh.setVisible(this.checked);
-// });
+TILE_LAYER_UI.toggle.vegetation.addEventListener("click", function () {
+    TILE_LAYER.vegetation.setVisible(this.checked);
+});
+TILE_LAYER_UI.toggle.sinhcanh.addEventListener("click", function () {
+    TILE_LAYER.sinhcanh.setVisible(this.checked);
+});
 
 export function TILE_LAYER_INFOBOX(map) {
     map.on("singleclick", function (evt) {

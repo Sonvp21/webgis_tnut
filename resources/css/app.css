@@ -1,3 +1,7 @@
+@import "flickity";
+@import "custom.css";
+@import "filepond/dist/filepond.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
