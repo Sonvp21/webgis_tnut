@@ -15,8 +15,6 @@ Route::get('/gioi-thieu', [HomeController::class, 'indexAbout'])->name('web.abou
 Route::get('/lien-he', [ContactController::class, 'index'])->name('web.contacts.index');
 Route::post('/lien-he', [ContactController::class, 'store'])->name('web.contacts.store');
 
-Route::post('/tinymce/upload', [App\Http\Controllers\TinymceController::class, 'upload'])->name('tinymce.upload');
-
 //Đăng ký nộp hồ sơ hội thi stkt và sáng kiến
 Route::middleware(['auth'])->group(function () {
     Route::get('/thong-tin-ca-nhan/htkhkt/{dossier}/edit', [UserController::class, 'editTechnicalInnovationDossier'])->name('web.dossier.kythuat.edit');
