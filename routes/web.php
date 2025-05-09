@@ -17,11 +17,6 @@ Route::post('/lien-he', [ContactController::class, 'store'])->name('web.contacts
 
 //Đăng ký nộp hồ sơ hội thi stkt và sáng kiến
 Route::middleware(['auth'])->group(function () {
-    Route::get('/thong-tin-ca-nhan/htkhkt/{dossier}/edit', [UserController::class, 'editTechnicalInnovationDossier'])->name('web.dossier.kythuat.edit');
-    Route::put('/thong-tin-ca-nhan/htkhkt/{dossier}', [UserController::class, 'updateTechnicalInnovationDossier'])->name('web.dossier.kythuat.update');
-    Route::get('/thong-tin-ca-nhan/sang-kien/{initiative}/edit', [UserController::class, 'editSangKienDossier'])->name('web.dossier.sangkien.edit');
-    Route::put('/thong-tin-ca-nhan/sang-kien/{initiative}', [UserController::class, 'updateSangKienDossier'])->name('web.dossier.sangkien.update');
-
     Route::get('/thong-tin-ca-nhan', [UserController::class, 'show'])->name('web.profile.show');
     Route::get('/thong-tin-ca-nhan/{user}/edit', [UserController::class, 'edit'])->name('web.users.edit');
     Route::put('/thong-tin-ca-nhan/{user}', [UserController::class, 'update'])->name('web.users.update');
