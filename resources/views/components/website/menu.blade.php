@@ -58,8 +58,8 @@
 
 
         </div>
-        <div class="flex flex-row gap-3 py-4 lg:py-0 ml-3">
-            <form class="relative flex w-full items-center lg:w-auto" action="">
+        <div>
+            <form class="relative flex !w-40 items-center lg:w-auto" action="">
                 <input name="q" type="text" class="h-8 w-full border-none pl-6 lg:h-7" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="absolute left-1 h-4 w-4 text-slate-600">
